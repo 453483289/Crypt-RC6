@@ -9,7 +9,7 @@ Crypt::RC6 - Perl RC6 block cipher encryption module
     my $cipher = new Crypt::RC6 $key;
 
     my $ciphertext = $cipher->encrypt($plaintext);
-    my $plaintext = $cipher->decrypt($plaintext);
+    my $plaintext = $cipher->decrypt($ciphertext);
 
 =head1 DESCRIPTION
 
@@ -34,7 +34,7 @@ package Crypt::RC6;
 
 require DynaLoader;
 
-$VERSION = 0.01;
+$VERSION = 0.02;
 @ISA = qw/DynaLoader/;
 
 bootstrap Crypt::RC6 $VERSION;
