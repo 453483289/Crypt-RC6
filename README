@@ -1,6 +1,6 @@
 NAME
 
-    Crypt::RC6 - Perl RC6 block cipher encryption module
+    Crypt::RC6 - Crypt::CBC compliant RC6 block cipher encryption module
 
 SYNOPSIS
 

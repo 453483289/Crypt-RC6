@@ -1,6 +1,6 @@
 /*
     author: John Hughes (jhughes@frostburg.edu)
-    date: 9/01
+    date: 11/01
 */
 
 #include "platform.h"
@@ -13,10 +13,13 @@
                  generates the RC6 key schedule in array S.
 */
 
-void rc6_generateKeySchedule(unsigned char* initKey, unsigned int S[])
+void rc6_generateKeySchedule(unsigned char* initKey,
+                             unsigned int keyLength,
+                             unsigned int S[]
+                            )
 {
 	unsigned int L[8];  /* We need up to 32 bytes. */
-    unsigned int keyLength, A, B, i, j, s, v;
+    unsigned int A, B, i, j, s, v;
 
     /* Point to the lowest byte of L. */
 
@@ -24,7 +27,6 @@ void rc6_generateKeySchedule(unsigned char* initKey, unsigned int S[])
     
     /* Move the bytes of initKey into L, little-endian fashion. */
 
-    keyLength = strlen(initKey);
 	for (j = 0; j < keyLength; j++)
 		*bPtr++ = initKey[j];
 
@@ -35,12 +37,13 @@ void rc6_generateKeySchedule(unsigned char* initKey, unsigned int S[])
 		S[i] = S[i - 1] + 0x9E3779B9;
     A = B = i = j = 0;
 	v = 3 * 44;
+    keyLength /= 4; 
 	for (s = 1; s <= v; s++)
 	{
 		A = S[i] = ROL(S[i] + A + B, 3);
 		B = L[j] = ROL(L[j] + A + B, A + B);
 		i = (i + 1) % 44;
-		j = (j + 1) % 4;
+		j = (j + 1) % keyLength;
 	}
 }
 

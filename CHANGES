@@ -1,5 +1,16 @@
 Revision history for Perl extension Crypt::RC6
 
+0.50   November 17, 2001
+
+    -- Thanks to feedback from Andrew Page, fixed two serious
+       bugs in function rc6_generateKeySchedule. The module now
+       performs in accordance with the test data provided in
+       THE RC6 BLOCKCIPHER.
+
+0.50   November 12, 2001
+
+    -- Made the distribution Crypt::CBC compliant.
+
 0.05   September 16, 2001
 
     -- Added test.pl to the distribution.

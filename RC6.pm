@@ -1,6 +1,6 @@
 =head1 NAME
 
-Crypt::RC6 - Perl RC6 block cipher encryption module
+Crypt::RC6 - Crypt::CBC compliant RC6 block cipher encryption module
 
 =head1 SYNOPSIS
 
@@ -34,7 +34,7 @@ package Crypt::RC6;
 
 require DynaLoader;
 
-$VERSION = 0.05;
+$VERSION = 0.50;
 @ISA = qw/DynaLoader/;
 
 bootstrap Crypt::RC6 $VERSION;
@@ -49,7 +49,7 @@ http://www.rsa.com/rsalabs/rc6/
 
 John Hughes (jhughes@frostburg.edu)
 
-I am indebted to Marc Lehmann, the author of the Crypt::Twofish2
+I am indebted to Marc Lehmann, the author of the C<Crypt::Twofish2>
 module, as I used his code as a guide.
 
 =cut
