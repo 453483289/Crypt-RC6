@@ -1,9 +1,12 @@
 Revision history for Perl extension Crypt::RC6
 
+0.05   September 16, 2001
+
+    -- Added test.pl to the distribution.
+
 0.04   September 16, 2001
 
-    -- Added a load test and ten tests using randomly generated
-       16-byte keys and plaintext blocks.
+    -- Added a load test.
 
 0.03   September 14, 2001
 

@@ -34,7 +34,7 @@ package Crypt::RC6;
 
 require DynaLoader;
 
-$VERSION = 0.04;
+$VERSION = 0.05;
 @ISA = qw/DynaLoader/;
 
 bootstrap Crypt::RC6 $VERSION;
