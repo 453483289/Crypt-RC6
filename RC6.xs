@@ -1,6 +1,6 @@
 /*
-    author: John Hughes (jhughes@frostburg.edu)
-    date: 11/01
+      author: John Hughes (jhughes@frostburg.edu)
+    modified: 11/01
 
     I am indebted to Marc Lehmann, the author of the Crypt::Twofish2
     module, as I used his code as a guide.
