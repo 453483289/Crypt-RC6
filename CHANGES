@@ -1,0 +1,8 @@
+Revision history for Perl extension Crypt::RC6
+
+0.03   September 14, 2001
+
+    -- Added this CHANGES file, README file, COPYING file.
+    -- Changed file permissions so that all may access the
+       unpacked distribution.
+
